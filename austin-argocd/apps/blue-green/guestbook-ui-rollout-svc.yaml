@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: guestbook-ui--rollout-svc-active
+  name: guestbook-ui-rollout-svc-active
 spec:
   ports:
   - port: 80
