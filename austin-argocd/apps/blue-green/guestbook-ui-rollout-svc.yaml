@@ -13,7 +13,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: guestbook-ui--rollout-svc-preview
+  name: guestbook-ui-rollout-svc-preview
 spec:
   ports:
   - port: 80
