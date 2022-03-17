@@ -1,23 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: guestbook-ui-rollout
+  name: guestbook-ui
 spec:
-  replicas: 3
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui-rollout
+      app: guestbook-ui
   template:
     metadata:
       labels:
-        app: guestbook-ui-rollout
-        test: test
-        test2: test2
+        app: guestbook-ui
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: guestbook-ui-rollout
+        name: guestbook-ui
         ports:
         - containerPort: 80
   strategy:
