@@ -6,7 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/abrumley-mw/argocd-blue.git
+    #repoURL: https://github.com/abrumley-mw/argocd-blue.git
+    repoURL: https://github.com/abrumley-mw/argocd.git
     targetRevision: HEAD
     path: blue
     directory:
