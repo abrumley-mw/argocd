@@ -9,7 +9,8 @@ spec:
     #repoURL: https://github.com/abrumley-mw/argocd-blue.git
     repoURL: https://github.com/abrumley-mw/argocd.git
     targetRevision: HEAD
-    path: blue
+    #path: blue
+    path: apps/blue
     directory:
       recurse: true
   destination:
