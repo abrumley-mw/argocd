@@ -9,51 +9,53 @@ spec:
     repoURL: https://github.com/abrumley-mw/argocd-blue.git
     targetRevision: HEAD
     path: app
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: blue
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: blue-one
-  namespace: argocd
-spec:
-  project: blue
-  source:
-    repoURL: https://github.com/abrumley-mw/argocd-blue.git
-    targetRevision: HEAD
-    path: app/one
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: blue
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: blue-two
-  namespace: argocd
-spec:
-  project: blue
-  source:
-    repoURL: https://github.com/abrumley-mw/argocd-blue.git
-    targetRevision: HEAD
-    path: app/two
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: blue
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: blue-incorrect
-  namespace: argocd
-spec:
-  project: blue
-  source:
-    repoURL: https://github.com/abrumley-mw/argocd-blue.git
-    targetRevision: HEAD
-    path: app/incorrect
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: blue
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: blue-one
+#   namespace: argocd
+# spec:
+#   project: blue
+#   source:
+#     repoURL: https://github.com/abrumley-mw/argocd-blue.git
+#     targetRevision: HEAD
+#     path: app/one
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: blue
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: blue-two
+#   namespace: argocd
+# spec:
+#   project: blue
+#   source:
+#     repoURL: https://github.com/abrumley-mw/argocd-blue.git
+#     targetRevision: HEAD
+#     path: app/two
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: blue
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: blue-incorrect
+#   namespace: argocd
+# spec:
+#   project: blue
+#   source:
+#     repoURL: https://github.com/abrumley-mw/argocd-blue.git
+#     targetRevision: HEAD
+#     path: app/incorrect
+#   destination:
+#     server: https://kubernetes.default.svc
+#     namespace: blue
