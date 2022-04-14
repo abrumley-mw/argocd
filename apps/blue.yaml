@@ -4,7 +4,7 @@ metadata:
   name: blue
   namespace: argocd
 spec:
-  project: blue
+  project: default
   source:
     repoURL: git@github.com:abrumley-mw/argocd-blue.git
     targetRevision: HEAD
@@ -13,4 +13,4 @@ spec:
 #      recurse: true
   destination:
     server: https://kubernetes.default.svc
-    namespace: blue
+    namespace: argocd
