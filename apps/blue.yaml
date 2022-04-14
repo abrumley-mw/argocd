@@ -9,8 +9,8 @@ spec:
     repoURL: git@github.com:abrumley-mw/argocd-blue.git
     targetRevision: HEAD
     path: blue
-    directory:
-      recurse: true
+#    directory:
+#      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: blue
