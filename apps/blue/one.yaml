@@ -1,16 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: all-apps
+  name: blue-one
   namespace: argocd
 spec:
-  project: default
+  project: blue
   source:
-    repoURL: https://github.com/abrumley-mw/argocd.git
+    repoURL: https://github.com/abrumley-mw/argocd-blue.git
     targetRevision: HEAD
-    path: apps
-    directory:
-      recurse: true
+    path: app/one
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: blue
