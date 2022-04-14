@@ -9,8 +9,8 @@ spec:
     repoURL: https://github.com/abrumley-mw/argocd.git
     targetRevision: HEAD
     path: apps
-    directory:
-      recurse: true
+#    directory:
+#      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
